@@ -21,11 +21,14 @@ public class Recursividad {
     //n = 5 resultado 5+4+3+2+1 = 15 
 
     public int sumaConsecutivos(int n){
+        System.out.println("Suma de valores: "+n);
         //caso base
         if(n == 1){
+            System.out.println("Caso base de la Suma es "+ n +" Es 1. ");
             return  1;
 
         }
+        //System.out.println("Resultado parcila para "+ n + " * Factorial ("+ (n-1)+") = "+ resultado);
         return n + sumaConsecutivos(n-1);
 
 
@@ -56,4 +59,16 @@ public class Recursividad {
         return numero % 10 + sumaDigitos(numero/10);
 
     }
+
+    public int fibonacci(int n){
+        //Caso base
+        if (n == 0)return 0;
+        if(n == 1)return 1;
+
+        return fibonacci(n-1)+ fibonacci(n-2);
+    }
+
+    
+
+
 }
